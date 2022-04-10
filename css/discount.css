@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1500px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    background-image: url("https://cdn.thoibaotaichinhvietnam.vn/stores/news_dataimages/nguyenthihahanh/032022/01/10/in_article/gia-ca-phe-hom-nay-ngay-13-dong-loat-giam-manh-chiu-tac-dong-manh-me-tu-cang-thang-dia-chinh-tri-giua-nga-va-ukraine.jpg?rt=20220301100805");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    
+}
+ .bg-image{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.678);
+    opacity: 0.5;
+} 
+.top{
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+}
+.header-top{
+    justify-content: space-between;
+    padding: 20px 0 ;
+    margin-left: 50px;
+}
+.header-top ul{
+    display: flex;
+    margin-right: 20px;
+}
+.header-top ul li{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.header-top ul li a{
+    font-family: var(--main-text-font);
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+
+}
+.header-top ul li a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(247, 223, 68);
+    border-radius: 10px;
+}
+header h2{
+    color: #5b2626;
+
+}
+header h2:hover{
+    color: #f1f1f1;
+
+}
+
+.header-text{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 11111;
+    font-size: 20px;
+    top: 50%;
+    left: 30%;
+    text-align: center;
+    min-width: 500px;
+    max-width: 700px;
+    color: red;
+    background-color: rgb(248, 244, 31);
+    padding: 20px;
+}
+.header-text:hover{
+    color: yellow;
+    background: red;
+    font-size: 23px;
+}
+.header-top p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: bold;
+}
+.SP h1{
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    padding: 15px;
+    width: 1540px;
+    background-color:rgb(241, 241, 241) ;
+    
+
+}
+.DMSP{
+    display: flex;
+    justify-content: center;
+}
+.DMSP li img{
+    width: 400px;
+    margin:50px 20px;
+}
+.DMSP li p{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ac0202;
+}
+.DMSP li h6{
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: line-through;
+}
+.DMSP li h5{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0;
+    width: 290px;
+    margin-left: 79px;
+    color: red;
+    background-color: rgb(255, 255, 20);
+    
+}
+.DMSP li button{
+    text-align: center;
+    font-size: 20px;
+    margin-left: 173px;
+    margin-top: 17px;
+    padding: 5px 16px;
+    font-weight: bold;
+    background-color: rgb(243 118 163);
+    border: 1px solid black;
+    border-radius: 20px ;
+
+}
+.DMSP li button:hover{
+    color: #fff;
+    
+    background-color: rgb(204, 107, 17)
+}
+footer .img{
+    background-image: url(https://sktperfectdemo.com/demos/cafe/wp-content/themes/cafe-pro/images/footer-bg-img.jpg);
+    height: 400px;
+    background-repeat: repeat;
+    margin-top: 50px;
+    
+}
+footer h1,h2{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+footer{
+    position: relative;
+}
+footer h1{
+    font-size: 50px;
+    padding-top: 60px;
+}
+.icon {
+    position: absolute;
+    bottom: 64px;
+    left: 534px;
+}
+.icon img{
+    font-size: 10px;
+    
+}
