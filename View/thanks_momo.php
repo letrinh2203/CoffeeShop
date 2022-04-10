@@ -8,8 +8,7 @@
 <h3> 
    Cảm ơn bạn đã mua hàng!<br>
 Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất! <br><br>
-Nếu có bất kì ý kiến gì về sản phẩm<br>
-Xin vui lòng liên hệ với chúng tôi qua số điện thoại +84 392584784 <br>
+Mọi thắc mắc vui lòng liên hệ với chúng tôi qua số điện thoại +84 392584784 <br>
 
 <?php echo '<a href="/DA_CoffeeShop/index.php">Trang chủ</a>';?>
 
