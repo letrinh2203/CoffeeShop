@@ -1,121 +1,102 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="aboutus">
+<?php
+    $jsondata = file_get_contents("View\User\AboutUs.json");
+    $json = json_decode($jsondata, true);
+?>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            
+           
+            .container-aboutus{
+            width: 1100px;
+            margin: 0px auto;
+            background: url(https://png.pngtree.com/background/20210715/original/pngtree-creative-coffee-color-geometric-leaf-background-picture-image_1293925.jpg);
+            }
+            .content{
+                overflow:hidden;
+            }
+            .row-aboutus{
+                padding:0px 20px 0px;
+            }
+            .nameTeam{
+            text-transform: uppercase;
+            text-align: center;
+            font-family: tahoma; 
+            font-weight: bold;
+            font-size: 45px; 
+            color: #fff;
+            }
+            h4{margin:auto; padding: 5px; color: blue; font-size: 20px;}
+           
+            .col-sm-4{
+                padding: 30px;
+                position: relative;
+                background-color:rgba(255,255,255,0.7);
+                /* background:#fff; */
+                background-clip: content-box;
+                list-style: none; 
+                font-size: 18px;
+                margin: 0px auto;
+                text-align: center;
+                border-radius: 15%;
+            }
+            .imagestyle{
+                padding: 10;
+                display: block;
+                border-radius: 50%;
+                width: 185px;
+                height: 190px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .follow-us li{ 
+                display:inline-block;
+                margin: 0px 5px 0px;
+            }
+            .fa-facebook{
+                font-size:20px;
+                color: blue;
+            }
+            .fa-instagram{
+                font-size:20px;
+                color: #DD2A7B ;
+            }
+            .fa-youtube-play{
+                font-size:24px;
+                color:red;
+            }
+        </style>
 <section class="our-webcoderskull padding-lg">
-  <div style="background-image: url('Images/b2.jpg')" class="container">
-    <div class="row heading heading-icon">
-        <h2 style="font-family: tahoma; font-weight: bold; color: #fff">My MINION Team</h2>
+
+    
+<div class="container-aboutus">
+    <div class="content">
+    <h2 class="nameTeam" >ABOUT MINION</h2>
+        <div class="row-aboutus">
+            <?php
+                $index = 1;
+                foreach($json['information'] as $key => $value){
+                    
+                    echo "<div class=\"col-sm-4\">";
+                    echo        "<img src=\"Images/{$value['imageUrl'] }\" class=\"imagestyle\">";
+                    echo        '<h4 >'. $value['name'].'</h4>';
+                    echo        '<li>MSSV: '.$value['mssv'].'</li>';
+                    echo        '<ul class="follow-us clearfix">';
+                    echo        '<li><a href=' .$value['facebook'].' > <i class="fa fa-facebook"></i></a></li>';
+                    echo        '<li><a href=' .$value['instagram'].'> <i class="fa fa-instagram"></i></a></li>';
+                    echo        '<li><a href=' .$value['youtube'].'> <i class="fa fa-youtube-play"></i></a></li>';
+                    echo        '</ul>';
+                    echo "</div>";
+                }
+            ?>
+        </div>
     </div>
-    <ul style="margin-left: 5px;" class="row">
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="a1.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/linhlucy1812">Phạm Thị Linh</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px;">4501104126</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com/zyzyanhkim"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-     
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren6.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/profile.php?id=100008668546456">Phạm Nguyễn Hồng Nguyên</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104163</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-       </li>
-       <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren4.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/nguyn2910">Hoàng Khôi Nguyên</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104162</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com/profile.php?id=100008530577426"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-       </li>
-    </ul>
-    <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren7.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/trang.sam.370/">Sầm Thị Hoàng Trang</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104249</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren8.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/thamlth.0101001/">Lê Thị Hồng Thắm</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104217</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren9.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/duongrealday">Trương Đình Thị Thuỳ Dương</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104043</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren10.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/profile.php?id=100058576056039">Đặng Thị Bích Truyền</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104264</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren11.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/VanAnh2722001">Nguyễn Thị Vân Anh</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">4501104009</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="Images/ren7.jpg" class="img-responsive" alt=""></figure>
-            <h3><a href="https://www.facebook.com/bap.binbin">Lê Ngô Tuyết Trinh</a></h3>
-            <p style="font-weight: bold;color: #ff6600; font-size: 16px">42.01.101.165</p>
-            <ul class="follow-us clearfix">
-              <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://instagram.com/?lang=vi"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-  </div>
-  </div>
+</div>
 </section>

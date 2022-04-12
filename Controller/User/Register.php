@@ -1,4 +1,4 @@
- <?php
+<?php
 	include_once("View/User/Register.php");
 	include_once("Model/User.php");
 
@@ -18,7 +18,7 @@
 				header("location: index.php");
 			}
 			else{
-				echo "<p class=\"error\">Tên đăng nhập bị trùng<p>";
+				echo "<p style=\"font-size: 20px; text-align: center; color: red; font-weight: bold;\" class=\"error\">Đăng ký không thành công<p>";
 			} 
 		}
 	}
