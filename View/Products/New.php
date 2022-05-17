@@ -16,7 +16,7 @@
                            
                 echo "<div class=\"single-product\">";
                 echo    "<div class=\"product-f-image\">";
-                echo        "<img src=\"Upload/{$row['ImageUrl']}\" style=\"height:280px;\">";
+                echo        "<img src=\"Upload/{$row['ImageUrl']}\" style=\"height:250px;\">";
                 echo        "<div class=\"product-hover\">";
                 echo            "<a  href=\"index.php?mod=products&act=detail&id={$row['ProductID']}\" class=\"view-details-link\"><i class=\"fa fa-link\"></i>CHI TIẾT</a>";
                 echo           "<a href=\"Controller/Cart/Add.php?id={$row['ProductID']}\" onclick=\"return insertCart({$row['ProductID']})\" class=\"add-to-cart-link\"><i  class=\"fa fa-shopping-cart\"></i>THÊM VÀO GIỎ HÀNG</a>";          

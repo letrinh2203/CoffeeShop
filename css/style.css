@@ -155,7 +155,7 @@ z-index: 999;}
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #30231D; color:#FFF;}
 .mainmenu-area .nav > li > a:focus {color: #FFF;}
 
-.slider-area { width:75%; position:relative; margin:0 auto; padding:5px;}
+.slider-area { width:100%; position:relative; margin:0 auto; padding:5px;}
 /*-------------------------
 [9. Block slider]
 ---------------------------*/
@@ -198,22 +198,27 @@ z-index: 999;}
 .block-slider .bx-prev{
 	left: 0px;
 	padding-right: 3px;
+    display: none;
 }
 .block-slider .bx-next{
 	right: 0px;
 	padding-left: 3px;
+    display: none;
 }
 .block-slider:hover .bx-prev{
 	left: 10px;
+    display: none;
 }
 .block-slider:hover .bx-next{
 	right: 10px;
+    display: none;
 }
 .block-slider .bx-prev:hover,
 .block-slider .bx-next:hover{
 	background: #30231D;
 	color: #fff;
 	border-color: #30231D;
+    display: none;
 }
 .right-slider{
     width: 100%; margin:0 auto;
@@ -499,7 +504,7 @@ z-index: 999;}
   padding: 1px 10px;
 }
 
-.maincontent-area {padding-bottom: 50px; padding-top:20px; }
+.maincontent-area {padding-bottom: 10px; padding-top:10px; }
 
 .product-wid-title {
   font-family:Courier New;
@@ -509,7 +514,6 @@ z-index: 999;}
   color: gray;
   margin-left:30px;
 }
-
 
 .single-wid-product {
     margin-bottom: 31px;
@@ -1530,5 +1534,7 @@ ul{
     .hotline-bar {
         display: none;
     }
+    
 }
+
 /* end dien thoai hotline  */

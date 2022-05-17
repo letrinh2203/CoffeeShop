@@ -9,6 +9,8 @@
     <?php
         if(!isset($_GET['mod'])){
             include_once ("View/Carousel.php");
+            include_once("Controller/Products/Discount.php");
+
         }
         if(isset($_GET['mod'])){
             $a = ucfirst($_GET['mod']);

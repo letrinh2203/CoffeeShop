@@ -1,9 +1,11 @@
 <div class="maincontent-area">
+
+
 <div class="slider-area">
     <!-- Slider -->
-
+    <div class="container">
     <div class="block-slider block-slider4">
-                <ul class="" id="bxslider-home4">
+                <ul id="bxslider-home4">
                     <li>
                         <a href="index.php?mod=products&act=allproducts">
                             <img  src="Images/carousel_01.png" alt="Slide">
@@ -48,4 +50,5 @@
      </div>
      </div> 
      </div> 
-
+     </div> 
+     </div> 

@@ -1,4 +1,5 @@
-<div style="width: 900px; float: right; margin-right: 170px;">
+<div style="width: 900px; float: right; margin-right: 200px;">
+
 <center><h2><span><a style="color: #ff6600;font-weight: bold;font-size: 30px" href="admin.php?mod=user&act=manage">Quản lý thành viên</a></span></h2></center>
 <p>
 	<table class="table table-bordered">

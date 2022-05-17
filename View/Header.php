@@ -104,7 +104,6 @@ EOD;
                         </li>
                         <li><a style="color: #FFFFFF" href="index.php?mod=products&act=allproducts" onclick="return isActive()">Sản Phẩm</a></li>
                         <!-- <li><a style="color: #000000" href="index.php?mod=products&act=detail">Chi Tiết</a></li> -->
-                        <!--<li><a href="index.php?mod=cart&act=detail">Giỏ Hàng</a></li>-->
                         <li class="dropdown">
                             <a style="color: #FFFFFF" href="#" class="dropbtn">Phân Loại</a>
                             <div class="dropdown-content">
@@ -124,6 +123,8 @@ EOD;
                                 ?>
                             </div>
                         </li>
+                        <li><a style="color: #FFFFFF" href="View\Discount.html">Khuyến mãi</a></li>
+
                     </ul>
                     <?php
                         include_once("Controller/Cart/Cart.php");
